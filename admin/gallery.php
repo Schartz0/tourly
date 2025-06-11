@@ -155,8 +155,8 @@ $result = $conn->query("SELECT * FROM gallery ORDER BY id DESC");
       <thead>
         <tr>
           <th>ID</th>
+          <th>Deskripsi</th>
           <th>Gambar</th>
-          <th>Caption</th>
           <th>Aksi</th>
         </tr>
       </thead>
@@ -164,14 +164,14 @@ $result = $conn->query("SELECT * FROM gallery ORDER BY id DESC");
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
           <td><?= $row['id'] ?></td>
-          <td>
-            <?php if ($row['image']): ?>
-              <img src="../uploads/<?= $row['image'] ?>" style="max-width: 80px;" />
-            <?php else: ?>
+            <td><?= htmlspecialchars($row['caption']) ?></td>
+            <td>
+              <?php if ($row['image']): ?>
+                <img src="../uploads/<?= $row['image'] ?>" style="max-width: 150px;" />
+              <?php else: ?>
               -
-            <?php endif; ?>
-          </td>
-          <td><?= htmlspecialchars($row['caption']) ?></td>
+              <?php endif; ?>
+            </td>
           <td>
             <a href="?edit=<?= $row['id'] ?>" class="btn" style="background:#2980b9;">Edit</a>
             <a href="?delete=<?= $row['id'] ?>" onclick="return confirm('Yakin ingin menghapus?')" class="btn" style="background:#c0392b;">Hapus</a>

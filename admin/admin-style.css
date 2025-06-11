@@ -63,14 +63,20 @@ body {
 
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
+  width: 100px;          /* lebar tetap */
+  height: 45px;          /* tinggi tetap */
+  line-height: 45px;     /* agar teks di tengah secara vertikal */
   background-color: #0095ff; /* Yale Blue */
   color: white;
+  text-align: center;    /* teks di tengah secara horizontal */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background 0.3s;
+  overflow: hidden;      /* jika teks terlalu panjang */
+  white-space: nowrap;   /* cegah teks turun ke bawah */
+  margin-top: 10px;
 }
+
 
 .btn:hover {
   background-color: #002fff; /* versi hover */

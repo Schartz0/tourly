@@ -52,6 +52,7 @@ $conn->close();
       <input type="text" name="username" placeholder="Username" class="login-input" required />
       <input type="password" name="password" placeholder="Password" class="login-input" required />
       <button type="submit" class="login-btn">Submit</button>
+      <a href="../public/index.html" class="back-btn">Back</a>
     </form>
   </div>
 </body>
