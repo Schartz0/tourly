@@ -113,7 +113,7 @@ $result = $conn->query("SELECT * FROM packages ORDER BY id DESC");
     <p class="success-msg"><?= htmlspecialchars($success) ?></p>
   <?php endif; ?>
 
-  <button class="btn" onclick="document.getElementById('addModal').style.display='flex'">+ Tambah Paket</button>
+  <button class="btn" onclick="document.getElementById('addModal').style.display='flex'">+ Tambah</button>
 
   <!-- Modal Tambah -->
   <div class="modal-overlay" id="addModal">

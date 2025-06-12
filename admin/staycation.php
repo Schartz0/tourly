@@ -116,7 +116,7 @@ $result = $conn->query("SELECT * FROM staycation ORDER BY id DESC");
   <?php endif; ?>
 
   <!-- Tombol Tambah -->
-  <button class="btn" onclick="document.getElementById('addModal').style.display='flex'">+ Tambah Staycation</button>
+  <button class="btn" onclick="document.getElementById('addModal').style.display='flex'">+ Tambah</button>
 
   <!-- Modal Tambah -->
   <div class="modal-overlay" id="addModal">
