@@ -184,7 +184,7 @@ $result = $conn->query("SELECT * FROM staycation ORDER BY id DESC");
           <td><?= htmlspecialchars($row['description']) ?></td>
           <td>
             <?php if ($row['image']): ?>
-              <img src="../uploads/<?= $row['image'] ?>" style="max-width: 80px;" />
+              <img src="../uploads/<?= $row['image'] ?>" style="max-width: 150px;" />
             <?php else: ?>
               -
             <?php endif; ?>

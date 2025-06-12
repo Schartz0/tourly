@@ -119,6 +119,13 @@ body { background: var(--white); }
 
 .container { padding-inline: 15px; }
 
+.button-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* optional: vertical centering */
+  margin-top: 2rem;         /* optional spacing */
+}
+
 .btn {
   color: var(--white);
   text-transform: uppercase;

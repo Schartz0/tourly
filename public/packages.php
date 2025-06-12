@@ -125,7 +125,9 @@ $result = $conn->query($sql);
 
         </nav>
 
-        <button class="btn btn-primary">Book Now</button>
+        <a href="https://wa.me/62895600300318?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20staycation" target="_blank" class="btn btn-primary">
+          book now
+        </a>
 
       </div>
     </div>
@@ -162,7 +164,7 @@ $result = $conn->query($sql);
                   <div class="package-price">
                     Rp <?php echo number_format($row['price'], 0, ',', '.'); ?>
                   </div>
-                  <a href="https://wa.me/6281234567890?text=Hi%20Tourly,%20I%20want%20to%20book%20<?php echo urlencode($row['title']); ?>" 
+                  <a href="https://wa.me/62895600300318?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20staycation"<?php echo urlencode($row['title']); ?>" 
                      class="book-now-btn">Book Now</a>
                 </div>
               </div>

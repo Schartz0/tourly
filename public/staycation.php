@@ -111,7 +111,7 @@ $result = $conn->query($sql);
           <ul class="navbar-list">
 
             <li>
-              <a href="./index.html" class="navbar-link" data-nav-link>home</a>
+              <a href="./index.php" class="navbar-link" data-nav-link>home</a>
             </li>
 
             <li>
@@ -134,7 +134,9 @@ $result = $conn->query($sql);
 
         </nav>
 
-        <button class="btn btn-primary">Book Now</button>
+        <a href="https://wa.me/62895600300318?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20staycation" target="_blank" class="btn btn-primary">
+          book now
+        </a>
 
       </div>
     </div>
@@ -159,7 +161,7 @@ $result = $conn->query($sql);
           <?php while ($row = $result->fetch_assoc()): ?>
             <li>
               <div class="content-card">
-                <a href="https://wa.me/6281234567890?text=Hi%20Tourly,%20I%20want%20to%20book%20<?php echo urlencode($row['title']); ?>" 
+                <a href="https://wa.me/62895600300318?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20staycation"<?php echo urlencode($row['title']); ?>" 
                    class="book-now-btn">Book Now</a>
                 <figure class="card-img">
                   <img src="./../uploads/<?php echo htmlspecialchars($row['image']); ?>" 

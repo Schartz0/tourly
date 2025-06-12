@@ -101,7 +101,7 @@ $result = $conn->query($sql);
           <ul class="navbar-list">
 
             <li>
-              <a href="./index.html" class="navbar-link" data-nav-link>home</a>
+              <a href="./index.php" class="navbar-link" data-nav-link>home</a>
             </li>
 
             <li>
@@ -124,7 +124,10 @@ $result = $conn->query($sql);
 
         </nav>
 
-        <button class="btn btn-primary">Book Now</button>
+        <a href="https://wa.me/62895600300318?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20staycation" target="_blank" class="btn btn-primary">
+          book now
+        </a>
+
 
       </div>
     </div>
@@ -182,69 +185,56 @@ $result = $conn->query($sql);
 
 
 
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(document.querySelectorAll('.carousel-slide'));
-  const prevBtn = document.querySelector('.prev-arrow');
-  const nextBtn = document.querySelector('.next-arrow');
-  
-  if (slides.length > 0) {
-    const slideWidth = slides[0].offsetWidth;
-    const gap = 20;
-    let currentIndex = 0;
-    
-    // Initialize carousel
-    const initCarousel = () => {
-      slides.forEach((slide, index) => {
-        slide.style.left = `${(slideWidth + gap) * index}px`;
-      });
-      centerSlide(currentIndex);
-    };
-    
-    // Center the current slide
-    const centerSlide = (index) => {
-      const containerWidth = track.parentElement.offsetWidth;
-      const slideOffset = (slideWidth + gap) * index;
-      const centerOffset = (containerWidth / 2) - (slideWidth / 2) - slideOffset;
-      
-      track.style.transform = `translateX(${centerOffset}px)`;
-      
-      // Update active class
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".carousel-track");
+    const slides = document.querySelectorAll(".carousel-slide");
+    const prevBtn = document.querySelector(".prev-arrow");
+    const nextBtn = document.querySelector(".next-arrow");
+
+    let currentIndex = 1;
+
+    function updateCarousel() {
+      const slideWidth = slides[0].offsetWidth + 20;
+      const container = document.querySelector(".carousel-container");
+      const containerWidth = container.offsetWidth;
+
+      const rawOffset = (slideWidth * currentIndex) - (containerWidth / 2 - slideWidth / 2);
+      const maxOffset = (slides.length * slideWidth) - containerWidth;
+      const totalOffset = Math.max(0, Math.min(rawOffset, maxOffset));
+
+      track.style.transform = `translateX(-${totalOffset}px)`;
+
       slides.forEach((slide, i) => {
-        if (i === index) {
-          slide.classList.add('active-slide');
-        } else {
-          slide.classList.remove('active-slide');
-        }
+        slide.classList.toggle("active", i === currentIndex);
       });
-    };
-    
-    // Event listeners
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
+    }
+
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex === 0) {
+        currentIndex = slides.length - 1; // lompat ke akhir
+      } else {
         currentIndex--;
-        centerSlide(currentIndex);
       }
+      updateCarousel();
     });
-    
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < slides.length - 1) {
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex === slides.length - 1) {
+        currentIndex = 0; // lompat ke awal
+      } else {
         currentIndex++;
-        centerSlide(currentIndex);
       }
+      updateCarousel();
     });
-    
-    // Initialize
-    initCarousel();
-    
-    // Handle window resize
-    window.addEventListener('resize', () => {
-      centerSlide(currentIndex);
-    });
-  }
-});
-  </script>
+
+
+    window.addEventListener("load", updateCarousel);
+    window.addEventListener("resize", updateCarousel);
+  });
+</script>
+
 
     <!-- Include Footer -->
   <?php include './includes/footer.php'; ?>

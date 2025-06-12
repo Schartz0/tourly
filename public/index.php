@@ -137,9 +137,9 @@
           </ul>
 
         </nav>
-
-        <button class="btn btn-primary">Login Admin</button>
-
+        <form action="./../admin/login.php" method="get">
+          <button class="btn btn-primary">Login Admin</button>
+        </form>
       </div>
     </div>
 
@@ -535,12 +535,14 @@
     </ul>
 
     <!-- Tombol untuk pindah ke halaman gallery.php -->
-    <form action="./gallery.php" method="get">
-      <button type="submit" class="btn btn-primary">View All Gallery</button>
-      
-    </form>
+        </div>
+        
+    <div class="button-wrapper">
+      <form action="./gallery.php" method="get">
+        <button type="submit" class="btn btn-primary">View All Gallery</button>
+      </form>
+    </div>
 
-  </div>
 </section>
 
 

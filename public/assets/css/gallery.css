@@ -16,27 +16,30 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 0;
   overflow: hidden;
 }
 
 .carousel-track {
-  display: flex; /* FIXED: previously invalid */
-  height: 500px; /* Adjusted for fixed caption */
+  display: flex;
   transition: transform 0.5s ease;
-  align-items: center; /* Center vertically if needed */
+  will-change: transform;
 }
 
 .carousel-slide {
-  flex: 0 0 auto;
-  width: 300px;
+  flex: 0 0 300px;
   margin: 0 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
 }
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
 
 .photo-card {
   width: 100%;
