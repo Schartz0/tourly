@@ -21,20 +21,40 @@
 }
 
 .carousel-track {
-  display: flex;
-  position: relative;
+  display: flex; /* FIXED: previously invalid */
   height: 500px; /* Adjusted for fixed caption */
   transition: transform 0.5s ease;
-  align-items: flex-start; /* Align items at the top */
+  align-items: center; /* Center vertically if needed */
 }
 
 .carousel-slide {
-  position: absolute;
+  flex: 0 0 auto;
   width: 300px;
+  margin: 0 10px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center; /* Center content horizontally */
+  justify-content: center;
 }
+
+.photo-card {
+  width: 100%;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.gallery-caption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+}
+
 
 /* Photo Card */
 .photo-card {
@@ -838,6 +858,11 @@ body { background: var(--white); }
   object-fit: cover;
 }
 
+.gallery-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 
 

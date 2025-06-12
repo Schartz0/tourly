@@ -1,3 +1,6 @@
+<?php
+// Jika ingin menyisipkan PHP, tambahkan di sini
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -135,7 +138,7 @@
 
         </nav>
 
-        <button class="btn btn-primary">Book Now</button>
+        <button class="btn btn-primary">Login Admin</button>
 
       </div>
     </div>
@@ -318,6 +321,7 @@
           </p>
 
           <ul class="package-list">
+            
 
             <li>
               <div class="package-card">
@@ -467,8 +471,9 @@
 
           </ul>
 
-          <form action="./packages.php" method="get">
+          <form action="../public/packages.php" method="get">
             <button type="submit" class="btn btn-primary">View All Packages</button>
+            
           </form>
 
 
@@ -484,53 +489,60 @@
       -->
 
       <section class="gallery" id="gallery">
-        <div class="container">
+  <div class="container">
 
-          <p class="section-subtitle">Photo Gallery</p>
+    <p class="section-subtitle">Photo Gallery</p>
 
-          <h2 class="h2 section-title">Photo's From Travellers</h2>
+    <h2 class="h2 section-title">Photo's From Travellers</h2>
 
-          <p class="section-text">
-            Lihat momen-momen berkesan yang diabadikan oleh para wisatawan selama perjalanan mereka bersama kami. 
-            Setiap foto mencerminkan keindahan destinasi, keseruan aktivitas, dan pengalaman autentik yang dialami langsung di lapangan.
-          </p>
+    <p class="section-text">
+      Lihat momen-momen berkesan yang diabadikan oleh para wisatawan selama perjalanan mereka bersama kami. 
+      Setiap foto mencerminkan keindahan destinasi, keseruan aktivitas, dan pengalaman autentik yang dialami langsung di lapangan.
+    </p>
 
-          <ul class="gallery-list">
+    <ul class="gallery-list">
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/Gallery 3.png" alt="Gallery image">
-              </figure>
-            </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/Gallery 3.png" alt="Gallery image">
+        </figure>
+      </li>
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/Gallery 2.png" alt="Gallery image">
-              </figure>
-            </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/Gallery 2.png" alt="Gallery image">
+        </figure>
+      </li>
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/Gallery 1.png" alt="Gallery image">
-              </figure>
-            </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/Gallery 1.png" alt="Gallery image">
+        </figure>
+      </li>
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/Gallery 4.png" alt="Gallery image">
-              </figure>
-            </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/Gallery 4.png" alt="Gallery image">
+        </figure>
+      </li>
 
-            <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/Gallery 5.png" alt="Gallery image">
-              </figure>
-            </li>
+      <li class="gallery-item">
+        <figure class="gallery-image">
+          <img src="./assets/images/Gallery 5.png" alt="Gallery image">
+        </figure>
+      </li>
 
-          </ul>
-        </div>
+    </ul>
 
-      </section>
+    <!-- Tombol untuk pindah ke halaman gallery.php -->
+    <form action="./gallery.php" method="get">
+      <button type="submit" class="btn btn-primary">View All Gallery</button>
+      
+    </form>
+
+  </div>
+</section>
+
 
 
 
@@ -557,7 +569,7 @@
           </div>
 
           <button class="btn btn-secondary">Contact Us !</button>
-
+        
         </div>
       </section>
 
